@@ -2,7 +2,9 @@ import Link from "@/node_modules/next/link";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Modal from "./components/Modal";
+
 import "./globals.css";
+import BasicModal from "./components/BasicModal";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,6 +34,7 @@ export default function RootLayout({
         <hr/> 
         {children}
         <Modal/>
+        <BasicModal/>
         </body>
     </html>
   );
