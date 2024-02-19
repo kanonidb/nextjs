@@ -1,5 +1,7 @@
+import Link from "@/node_modules/next/link";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Modal from "./components/Modal";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,8 +17,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className="p-6">
+      <body className={inter.className}>
+        <nav>
+          <ul className="flex gap-6">
+            <li><Link href="/">Home</Link> </li>
+            <li><Link href="/about">About</Link></li>
+            <li><Link href="/blogs">Blogs</Link></li>
+            <li><Link href="/post">Posts</Link></li>
+            <li><Link href="/save">Save</Link></li>
+          
+          </ul>
+         </nav>
+        <hr/> 
+        {children}
+        <Modal/>
+        </body>
     </html>
   );
 }
