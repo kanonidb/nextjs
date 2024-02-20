@@ -37,30 +37,36 @@ export default function SaveData() {
             <h1 className=" w-full text-center m-4 font-semibold text-lg ">GET & POST Request in NextJS Stable App Router</h1>
             <form onSubmit={handleSubmit} className=" flex w-full flex-col justify-center items-center ">
                 <div className=" flex w-1/2 justify-center items-center gap-4 ">
-                <input
-                        type="number"
-                        name="userId"
-                        value={userId}
-                        placeholder="Enter the userId"
-                        onChange={e => setUserId(e.target.value)}
-                        className=" border p-2 px-4 rounded outline-none "
-                    />
-                    <input
-                        type="text"
-                        name="title"
-                        value={title}
-                        placeholder="Enter the title"
-                        onChange={e => setTitle(e.target.value)}
-                        className=" border p-2 px-4 rounded outline-none "
-                    />
-                     <input
-                        type="text"
-                        name="body"
-                        value={body}
-                        placeholder="Enter the body"
-                        onChange={e => setBody(e.target.value)}
-                        className=" border p-2 px-4 rounded outline-none "
-                    />
+                    <div>
+                        <input
+                            type="number"
+                            name="userId"
+                            value={userId}
+                            placeholder="Enter the userId"
+                            onChange={e => setUserId(e.target.value)}
+                            className=" border p-2 px-4 rounded outline-none "
+                        />
+                    </div>
+                    <div>
+                        <input
+                            type="text"
+                            name="title"
+                            value={title}
+                            placeholder="Enter the title"
+                            onChange={e => setTitle(e.target.value)}
+                            className=" border p-2 px-4 rounded outline-none "
+                        />
+                    </div>
+                    <div>
+                        <input
+                            type="text"
+                            name="body"
+                            value={body}
+                            placeholder="Enter the body"
+                            onChange={e => setBody(e.target.value)}
+                            className=" border p-2 px-4 rounded outline-none "
+                        />
+                    </div>
                     <button
                         type="submit"
                         className=" border-blue-500 bg-blue-500 text-white p-2 px-4 rounded-md "
