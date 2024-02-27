@@ -23,7 +23,7 @@ export default function SaveData() {
             if (res.ok) {
                 console.log("Yeai!")
             } else {
-                console.log("Oops! Something is wrong.")
+                console.log("Oops! Something is wrong. Try again")
             }
         } catch (error) {
             console.log(error)
